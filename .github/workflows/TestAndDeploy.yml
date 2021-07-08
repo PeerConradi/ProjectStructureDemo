@@ -26,7 +26,10 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        script: cd ProjectStructureDemo && git pull && docker-compose up -d --build
+        key: ${{ secrets.SSHKEY }}
+        script: | 
+          cd ProjectStructureDemo 
+          git pull
+          docker-compose up -d --build
 
     
